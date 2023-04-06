@@ -11,10 +11,10 @@
 // Output: 78
 //  
 
-const findMax = (arr)=>{
+const findMax = (arr) => {
     let max = arr[0];
-    for(let i = 0; i < arr.lenght; i++) {
-        if(max < arr[i])
+    for (let i = 0; i < arr.length; i++) {
+        if (max < arr[i])
             max = arr[i];
     }
     return max;
@@ -32,14 +32,13 @@ const findMax = (arr)=>{
 // Output: 81
 //  
 
-const sumNums = (arr)=>{
-    let sum=0;
-    for(let i = 1; i < arr.lenght; i++) 
-    {
-        if(arr[i]!=NaN)
-        {
-            sum+=arr[i];
+const sumNums = (arr) => {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (typeof (arr[i]) === "number") {
+            sum += arr[i];
         }
+
     }
     return sum;
 }
@@ -55,12 +54,12 @@ const sumNums = (arr)=>{
 // Input: ['C#', 'JS', 'Ruby','Python'] 
 // Output: ['Python','Ruby','JS','C#']
 
-const reverseArray = (arr)=>{
-    let arr2=[];
-    for(let i = arr.lenght-1,j=0; i >= 0,j<arr.lenght ; i--,j++) 
-       arr2[j]=arr[i];
+const reverseArray = (arr) => {
+    let arr2 = [];
+    for (let i = arr.length - 1, j = 0; i >= 0, j < arr.length; i--, j++)
+        arr2[j] = arr[i];
     return arr2;
 }
 // -------------------------------------------------------------------------------------------------------
 
-module.exports = {findMax , sumNums, reverseArray};
+module.exports = { findMax, sumNums, reverseArray };
