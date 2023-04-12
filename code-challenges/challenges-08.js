@@ -70,7 +70,7 @@ const getEntries = (obj) => {
     }
   }
   return result;
-};
+}
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -113,6 +113,12 @@ const getInfo = (arr) => {
   let studentsName = [];
   // write your code here
 
+  for (const course of arr) {
+    coursesName.push(course.course);
+    for (const student of course.Students) {
+      studentsName.push(student);
+    }
+  }
   return { coursesName, studentsName };
 };
 // -------------------------------------------------------------------------------------------------------
@@ -136,6 +142,7 @@ const getInfo = (arr) => {
 
 const getStudents = (arr) => {
   // write your code here
+  
 };
 //  ------------------------------------------------------------------------------------------------------
 
