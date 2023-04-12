@@ -37,7 +37,7 @@ describe("Challenge08-02", () => {
 });
 
 describe("Challenge08-03", () => {
-  test.skip("Get-Course-Name", () => {
+  test("Get-Course-Name", () => {
     expect(getInfo(courses).coursesName[0]).toEqual("Java");
     expect(getInfo(courses).coursesName.length).toStrictEqual(4);
 
