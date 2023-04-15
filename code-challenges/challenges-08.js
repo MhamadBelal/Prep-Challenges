@@ -28,7 +28,7 @@
 
 const customerAndAge = (obj) => {
   // write your code here
-  let arr=new Array();
+  let arr=[];
  for(const key in obj)
  {
   arr.push(`Customer Name :${key} , Age :${obj[key]}`)
@@ -142,6 +142,22 @@ const getInfo = (arr) => {
 
 const getStudents = (arr) => {
   // write your code here
+  let result=[];
+  for(const arr1 of arr)
+  for (const coursee of courses)
+  {
+    for (const stud of coursee.Students)
+      {
+        if (stud.includes(arr1))
+        {
+          result.push({
+            Student: stud,
+            course: coursee.course
+          });
+        } 
+    }
+  }
+  return result;
   
 };
 //  ------------------------------------------------------------------------------------------------------
