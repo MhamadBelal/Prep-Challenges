@@ -130,6 +130,7 @@ const statistics = (obj) => {
         return acc;
     },{})
     return voted;
+
 }
 
 
