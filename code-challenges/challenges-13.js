@@ -40,9 +40,9 @@
 
 const objectCounter = (obj) => {
     // write your code here
-    const count = obj.reduce((counter)=>{
-        return counter+1
-    },0)
+    const count = obj.reduce((counter) => {
+        return counter + 1
+    }, 0)
     return count;
 
 }
@@ -66,14 +66,15 @@ const objectCounter = (obj) => {
 
 const stringReverse = (str) => {
     // write your code here
-    const words= str.split(" ");
-    const reverse = words.reduce((rev,curr)=>{
+    const words = str.split(" ");
+    const reverse = words.reduce((rev, curr) => {
         return [curr].concat(rev)
     }, []);
-   //
+    //
     return reverse.join(" ");
 
 }
+
 
 
 // -------------------------------------------------------------------------------------------------------
@@ -131,6 +132,8 @@ const statistics = (obj) => {
     return voted;
 
 }
+
+
 // -------------------------------------------------------------------------------------------------------
 
 
