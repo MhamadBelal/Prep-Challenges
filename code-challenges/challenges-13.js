@@ -119,6 +119,17 @@ const stringReverse = (str) => {
 
 const statistics = (obj) => {
     // write your code here
+    const voted=obj.reduce((acc,curr)=>{
+        const candidate = curr.votes_To;
+        if(!acc[candidate])
+            acc[candidate]=1;
+        else
+            acc[candidate]++;
+    
+        return acc;
+    },{})
+    return voted;
+
 }
 // -------------------------------------------------------------------------------------------------------
 
