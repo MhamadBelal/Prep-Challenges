@@ -24,7 +24,7 @@
         {
             "language": "javascript",
             "source": [
-                "function appendAndDelete(s, t, k) {\n    // Write your code here\n const sLength = s.length;\n  const tLength = t.length;\n\n  if (k >= sLength + tLength) {\n    return \"Yes\";\n  }\n\n  let commonLength = 0;\n  for (let i = 0; i < Math.min(sLength, tLength); i++) {\n    if (s[i] === t[i]) {\n      commonLength++;\n    } else {\n      break;\n    }\n  }\n\n  const minOperations = (sLength - commonLength) + (tLength - commonLength);\n\n  if (k >= 2 * sLength) {\n    return \"Yes\";\n  } else if (k >= minOperations && (k - minOperations) % 2 === 0) {\n    return \"Yes\";\n  } else {\n    return \"No\";\n  }\n}"
+                "function appendAndDelete(s, t, k) {\n  // Write your code here\n  // I asked for help from some felows to solve this correctly with all the tests consitions, and I got the idea of the lab\n  let same = 0;\n  for (let i = 0 ; i <s.length; i++){\n      if(s[i]!=t[i])\n          break;\n      same++;\n  }\n  let delet = s.length-same;\n  let add = t.length-same;\n  let action = delet+add;          \n  if (k<action || (k%2 !=action%2) && k<s.length+t.length) \n      return 'No'\n  else \n      return 'Yes'\n\n}"
             ],
             "outputs": []
         },
@@ -45,7 +45,7 @@
         {
             "language": "javascript",
             "source": [
-                ""
+                "function encryption(s) {\n    // Write your code here\n    const processedStr = s.replace(/\\s/g, \"\");\n  const L = processedStr.length;\n  const columns = Math.ceil(Math.sqrt(L));\n  let encrypted = \"\";\n\n  for (let i = 0; i < columns; i++) {\n    for (let j = i; j < L; j += columns) {\n      encrypted += processedStr[j];\n    }\n    encrypted += \" \";\n  }\n\n  return encrypted;\n}"
             ],
             "outputs": []
         },
@@ -59,7 +59,7 @@
         {
             "language": "javascript",
             "source": [
-                ""
+                "function timeInWords(h, m) {\n    // Write your code here\n    const words = [\n    \"\", // Placeholder for zero index\n    \"one\", \"two\", \"three\", \"four\", \"five\", \"six\", \"seven\", \"eight\", \"nine\",\n    \"ten\", \"eleven\", \"twelve\", \"thirteen\", \"fourteen\", \"fifteen\", \"sixteen\", \"seventeen\", \"eighteen\", \"nineteen\",\n    \"twenty\", \"twenty one\", \"twenty two\", \"twenty three\", \"twenty four\", \"twenty five\", \"twenty six\", \"twenty seven\", \"twenty eight\", \"twenty nine\"\n  ];\n\n  let timeInWords = \"\";\n\n  if (m === 0) {\n    timeInWords = words[h] + \" o' clock\";\n  } else if (m === 15) {\n    timeInWords = \"quarter past \" + words[h];\n  } else if (m === 30) {\n    timeInWords = \"half past \" + words[h];\n  } else if (m === 45) {\n    timeInWords = \"quarter to \" + words[h + 1];\n  } else if (m === 1) {\n    timeInWords = \"one minute past \" + words[h];\n  } else if (m === 59) {\n    timeInWords = \"one minute to \" + words[h + 1];\n  } else if (m <= 30) {\n    timeInWords = words[m] + \" minutes past \" + words[h];\n  } else {\n    timeInWords = words[60 - m] + \" minutes to \" + words[h + 1];\n  }\n\n  return timeInWords;\n}"
             ],
             "outputs": []
         }
